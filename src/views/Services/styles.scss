@@ -3,4 +3,61 @@
 .services-container {
     @include page-spacing;
     padding-top: $page-padding-top;
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin: 0 200px;
+
+        .card {
+            margin: 0 auto;
+
+            p {
+                margin-top: 10px;
+            }
+        }
+
+        .first {
+            opacity: 0;
+            animation: slideIn .5s ease-in-out forwards;
+        }
+
+        .second {
+            opacity: 0;
+            animation: slideIn .5s .2s ease-in-out forwards
+        }
+
+        .third {
+            opacity: 0;
+            animation: slideIn .5s .4s ease-in-out forwards;
+        }
+
+        .fourth {
+            opacity: 0;
+            animation: slideIn .5s .6s ease-in-out forwards;
+        }
+
+        .fifth {
+            opacity: 0;
+            animation: slideIn .5s .8s ease-in-out forwards;
+        }
+
+        .sixth {
+            opacity: 0;
+            animation: slideIn .5s 1s ease-in-out forwards;
+        }
+        
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
