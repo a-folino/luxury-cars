@@ -1,0 +1,79 @@
+@import '../../components/app/styles.scss';
+
+$first-color: #F7121E;
+$second-color: #090809;
+$third-color: #FFF215;
+
+.home-container {
+    @include page-spacing;
+    padding-top: $page-padding-top;
+    
+    h1 {
+        font-size: 5rem;
+        animation: title .5s ease-in-out;
+    }
+
+    p {
+        opacity: 0;
+        animation: text .5s .5s ease-in-out forwards;
+        max-width: 60%;
+        font-size: 1.1rem;
+        
+    }
+
+    img {
+        position: absolute;
+        z-index: 2;
+        right: 3vw;
+        bottom: 5vh;
+        animation: show 1s ease;
+    }
+
+    // .stripes {
+    //     display: flex;
+    //     position: absolute;
+    //     right: 2vw;
+    //     top: 0;
+
+    //     .stripe {
+    //         width: 150px;
+    //         height: 100vh;
+
+    //         &-first {
+    //             background-color: $first-color;
+    //         }
+
+    //         &-second {
+    //             background-color: $second-color;
+    //         }
+
+    //         &-third {
+    //             background-color: $third-color;
+    //         }
+    //     }
+    // }
+}
+
+@keyframes title {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes text {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

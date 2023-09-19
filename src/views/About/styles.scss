@@ -1,0 +1,6 @@
+@import '../../components/app/styles.scss';
+
+.about-container {
+    @include page-spacing;
+    padding-top: $page-padding-top;
+}

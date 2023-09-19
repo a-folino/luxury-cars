@@ -6,12 +6,12 @@ import { Services } from '../../views/Services';
 import { About } from '../../views/About';
 import { Contact } from '../../views/Contact';
 import { Nav } from '../nav';
+import { colors } from '../../data/data';
 
 function App() {
   const [view, setView] = useState('');
-  
+
   const displayContent = () => {
-    console.log(view)
     switch (view) {
       case 'Home':
         return <Home />;
@@ -28,9 +28,23 @@ function App() {
     }
   }
 
+  const background = () => {
+    if (view === 'Home') {
+      return colors.primaryColor;
+    } else if (view === 'Cars') {
+      return colors.accentColor3;
+    } else if (view === 'Services') {
+      return colors.accentColor;
+    } else if (view === 'About') {
+      return colors.primaryColor;
+    } else if (view === 'Contact') {
+      return colors.accentColor2;
+    }
+  }
+
   return (
-    <div className="container">
-      <Nav setView={setView} />
+    <div className="container" style={{ background: background(), transition: 'background 1s ease' }}>
+      <Nav setView={setView} view={view} />
       {displayContent()}
     </div>
   );
