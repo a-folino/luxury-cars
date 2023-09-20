@@ -1,29 +1,27 @@
 @import '../../components/app/styles.scss';
 
 .cars-container {
-    display: flex;
-    flex-direction: column;
-    @include page-spacing;  
-    padding-top: $page-padding-top;
+    @include page-spacing; 
 
     h1 {
+        align-self: flex-start;
         margin-bottom: 70px;
         animation: title 1s ease forwards;
     }
 
     .cars-wrapper {
         display: grid;
-        grid-template-columns: 1fr .75fr 2fr;
+        grid-template-columns: 300px .75fr 1fr;
+        gap: 100px;
 
         .brands {
             display: flex;
             flex-wrap: wrap;
-            gap: 50px;
-            grid-column: 1 / 2;
+            gap: 40px;
             opacity: 0;
             animation: show .8s ease forwards;
     
-            & > * {
+            .brand {
                 cursor: pointer;
                 filter: grayscale(100%);
                 max-width: 120px;
@@ -43,19 +41,16 @@
     
         .cars {
             display: flex;
-            justify-content: center;
             flex-direction: column;
             gap: 40px;
             text-align: left;
-            grid-column: 2 / 3;
-            margin-left: 100px;
             opacity: 0;
             animation: title .5s 1s ease forwards;
 
             .car {
                 background-color: #eee;
                 cursor: pointer;
-                transition: all .2s ease;
+                transition: all .2s ease forwards;
     
                 &:hover {
                     background-color: #ddd;
@@ -80,22 +75,69 @@
         }
     
         .car-details {
-            margin-left: 150px;
             animation: show .5s ease;
-            height: 450px;
-            animation: show .5s ease;
-            grid-column: 3 / 4;
     
             h2 {
                 font-size: 2rem;
             }
             
             img {
-                height: 400px;
+                width: 35vw;
+                max-height: 430px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .cars-container {
+        padding-bottom: 0;
+        overflow-y: scroll;
+        display: flex; 
+        flex-direction: column;
+        @include hide-scrollbar;
+
+
+        h1 {
+            align-self: flex-start;
+            margin-bottom: 40px;
+            animation: title 1s ease forwards;
+        }
     
-            p {
-                width: 70ch;
+        .cars-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 70px;
+    
+            .brands {
+                gap: 30px;
+        
+                .brand {
+                    margin: 0 auto;
+                    max-width: 110px;
+        
+                    &:hover {
+                        filter: grayscale(0%);
+                        transition: all .3s ease;
+                        transform: rotate(-3deg);
+                    }
+                }
+            }
+        
+            .car-details {
+                display: flex;
+                flex-direction: column;
+                animation: show .5s ease;
+                margin-bottom: 70px;
+        
+                h2 {
+                    font-size: 2rem;
+                }
+                
+                img {
+                    margin: 20px auto;
+                    width: 400px;
+                }
             }
         }
     }

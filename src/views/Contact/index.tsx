@@ -56,7 +56,7 @@ export const Contact = (): JSX.Element => {
             </div>
 
             <div className="right-contact">
-                <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.0178363947257!2d144.9759963!3d-37.813051200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642c696e85e65%3A0xa844d73b92d5684e!2sTreasury%20Pl%2C%20East%20Melbourne%20VIC%203002!5e0!3m2!1sen!2sau!4v1695176616940!5m2!1sen!2sau" width="600" height="450" style={{ border: '0' }} loading="lazy"></iframe>
+                <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.0178363947257!2d144.9759963!3d-37.813051200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642c696e85e65%3A0xa844d73b92d5684e!2sTreasury%20Pl%2C%20East%20Melbourne%20VIC%203002!5e0!3m2!1sen!2sau!4v1695176616940!5m2!1sen!2sau" width="600vw" height="450" style={{ border: '0' }} loading="lazy"></iframe>
             </div>
         </div>
     )

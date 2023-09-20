@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Oswald:wght@200;300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
 @import "react-slideshow-image/dist/styles.css";
 
-$page-padding-top: 115px;
 $color-blue: #0E52BA;
 
 @mixin page-spacing {
   height: 100vh;
-  padding: 0 50px;
+  padding: 115px 50px;
+  overflow: hidden;
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+        
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }
 
 * {
@@ -17,8 +27,8 @@ $color-blue: #0E52BA;
 
 body {
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
   background: #fafafa;
+  @include hide-scrollbar;
 }
 
 h1, h2, h3, h4, h5 {

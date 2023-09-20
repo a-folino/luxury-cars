@@ -4,7 +4,6 @@
     display: grid;
     grid-template-rows: 80px min-content;
     @include page-spacing;
-    padding-top: $page-padding-top;
 
     h1 {
         animation: title 1s ease forwards;
@@ -89,5 +88,39 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        padding-bottom: 0;
+        @include hide-scrollbar;
+        
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 50px;
+
+            img {
+                width: 80vw;
+            }
+        }
+
+        .cards {
+            text-align: center;
+            margin: 0;
+    
+            .card {
+                max-width: 250px;
+                
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 }

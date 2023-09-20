@@ -4,29 +4,33 @@ import 'react-slideshow-image/dist/styles.css'
 import { slideImages } from '../../data/data';
 
 export const Services = (): JSX.Element => {
-
     const slideStyle = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundSize: 'cover',
-        height: '500px',
-        width: '700px'
+        backgroundSize: 'contain',
+        height: '50vh',
+        width: '40vw',
     }
+
     return (
         <div className="services-container">
             <h1>Services</h1>
 
             <div className="slideshow-container">
-                <Slide easing="ease" autoplay={true} duration={3000} cssClass="slide-wrapper" canSwipe={false} >
-                    {slideImages.map((image, index) => {
-                        return (
-                            <div key={index}>
-                                <div style={{ ...slideStyle, backgroundImage: `url(${image.url})` }}></div>
-                            </div>
-                        )
-                    })}
-                </Slide>
+                {window.innerWidth > 1100 ? 
+                    <Slide easing="ease" autoplay={true} duration={3000} cssClass="slide-wrapper" canSwipe={false} >
+                        {slideImages.map((image, index) => {
+                            return (
+                                <div key={index}>
+                                    <div style={{ ...slideStyle, backgroundImage: `url(${image.url})` }}></div>
+                                </div>
+                            )
+                        })}
+                    </Slide> : 
+                    <img src={slideImages[0].url} alt="slide" />
+                }
+                
             </div>
 
             <div className="cards">
