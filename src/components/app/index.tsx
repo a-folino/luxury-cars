@@ -6,7 +6,6 @@ import { Services } from '../../views/Services';
 import { About } from '../../views/About';
 import { Contact } from '../../views/Contact';
 import { Nav } from '../nav';
-import { colors } from '../../data/data';
 
 function App() {
   const [view, setView] = useState('');
@@ -28,22 +27,8 @@ function App() {
     }
   }
 
-  const background = () => {
-    if (view === 'Home') {
-      return colors.primaryColor;
-    } else if (view === 'Cars') {
-      return colors.primaryColor;
-    } else if (view === 'Services') {
-      return colors.primaryColor;
-    } else if (view === 'About') {
-      return '#0F52BA';
-    } else if (view === 'Contact') {
-      return colors.primaryColor;
-    }
-  }
-
   return (
-    <div className="container" style={{ background: background(), transition: 'background 1s ease' }}>
+    <div className="container">
       <Nav setView={setView} view={view} />
       {displayContent()}
     </div>

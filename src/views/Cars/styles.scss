@@ -20,6 +20,8 @@
             flex-wrap: wrap;
             gap: 50px;
             grid-column: 1 / 2;
+            opacity: 0;
+            animation: show .8s ease forwards;
     
             & > * {
                 cursor: pointer;
@@ -30,6 +32,7 @@
                 &:hover {
                     filter: grayscale(0%);
                     transition: all .3s ease;
+                    transform: rotate(-3deg);
                 }
             }
     
@@ -46,6 +49,8 @@
             text-align: left;
             grid-column: 2 / 3;
             margin-left: 100px;
+            opacity: 0;
+            animation: title .5s 1s ease forwards;
 
             .car {
                 background-color: #eee;
@@ -55,6 +60,7 @@
                 &:hover {
                     background-color: #ddd;
                     transition: all .2s ease;
+                    transform: scale(1.05);
                 }
     
                 p {

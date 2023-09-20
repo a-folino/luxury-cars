@@ -133,7 +133,7 @@ export const cars = {
 
 export const slideImages = [
     {
-        url: "https://images.pexels.com/photos/7144187/pexels-photo-7144187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        url: "https://images.pexels.com/photos/4173191/pexels-photo-4173191.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         alt: "people"
     },
     {
@@ -141,15 +141,15 @@ export const slideImages = [
         alt: "person driving"
     },
     {
-        url: "https://images.pexels.com/photos/4173191/pexels-photo-4173191.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        url: "https://images.pexels.com/photos/7144187/pexels-photo-7144187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         alt: "cars in showroom"
     },
 ]
 
-export const colors = {
-    primaryColor: '#fbfbfb',
-    secondaryColor: '#ccc',
-    accentColor: '#aaa',
-    accentColor2: '#888',
-    accentColor3: '#666',
-  }
+// export const colors = {
+//     primaryColor: '#fbfbfb',
+//     secondaryColor: '#ccc',
+//     accentColor: '#aaa',
+//     accentColor2: '#888',
+//     accentColor3: '#666',
+//   }

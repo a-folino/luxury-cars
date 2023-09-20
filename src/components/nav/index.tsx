@@ -25,13 +25,10 @@ export const Nav = ({ setView, view }: Props): JSX.Element => {
         if (view === '') return setView('Home');
 
         refs.forEach((ref) => {
-            if (ref?.textContent === view && ref.textContent === 'About') {
-                ref.classList.add('active-about');
-            } else if (ref?.textContent === view) {
-                ref?.classList.add('active-nav');
+            if (ref?.textContent === view) {
+                ref.classList.add('active-nav');
             } else {
                 ref?.classList.remove('active-nav');
-                ref?.classList.remove('active-about');
             }
         })
     }, [view, setView])

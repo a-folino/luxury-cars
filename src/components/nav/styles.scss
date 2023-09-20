@@ -32,23 +32,10 @@ nav {
             @include underline;
         }
     }
-
     
 }
 
 .active-nav {
     color: $color-blue;
     @include underline;
-}
-
-.active-about {
-    color: white !important;
-    &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: $hover-color !important;
-        margin-top: 2px;
-    }
 }
