@@ -132,7 +132,7 @@ export const cars = {
 }
 
 export const colors = {
-    primaryColor: '#eee',
+    primaryColor: '#fbfbfb',
     secondaryColor: '#ccc',
     accentColor: '#aaa',
     accentColor2: '#888',

@@ -32,13 +32,13 @@ function App() {
     if (view === 'Home') {
       return colors.primaryColor;
     } else if (view === 'Cars') {
-      return colors.accentColor3;
-    } else if (view === 'Services') {
-      return colors.accentColor;
-    } else if (view === 'About') {
       return colors.primaryColor;
+    } else if (view === 'Services') {
+      return colors.primaryColor;
+    } else if (view === 'About') {
+      return '#0F52BA';
     } else if (view === 'Contact') {
-      return colors.accentColor2;
+      return colors.primaryColor;
     }
   }
 

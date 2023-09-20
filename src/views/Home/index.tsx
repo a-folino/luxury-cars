@@ -6,14 +6,13 @@ export const Home = (): JSX.Element => {
 
     return (
         <div className="home-container">
-            <h1 ref={titleRef}>Unparalleled Luxury</h1>
-            <p>At Auto Emporium Melbourne, we redefine automotive excellence. Our exclusive selection of luxury cars represents the pinnacle of craftsmanship, performance, and sophistication.</p>
-            <img src={require('../../assets/ferrari.webp')} alt="ferrari" />
-            
-            <div className="stripes">
-                <div className="stripe stripe-first"></div>
-                <div className="stripe stripe-second"></div>
-                <div className="stripe stripe-third"></div>
+            <video id="background-video" loop autoPlay muted>
+                <source src={require('../../assets/homepage.mp4')} type="video/mp4" />
+            </video>
+            <div className="overlay">
+                <h1 ref={titleRef}>Unparalleled Luxury</h1>
+                <h3>At Auto Emporium Melbourne, we redefine automotive excellence. Our exclusive selection of luxury cars represents the pinnacle of craftsmanship, performance, and sophistication.</h3>
+                <img src={require('../../assets/ferrari.webp')} alt="ferrari" />
             </div>
         </div>
     )

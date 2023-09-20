@@ -1,6 +1,54 @@
 @import '../../components/app/styles.scss';
 
 .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
     @include page-spacing;
-    padding-top: $page-padding-top;
+    color: white;
+
+    .left-about {
+        flex: 1;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 300;
+        }
+
+        &-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    }
+
+    .right-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+
+        .slideshow {
+            position: relative;
+            height: 400px;
+            width: 640px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            overflow: hidden;
+            border: 1px solid red;
+
+            img {
+                position: absolute;
+            }
+        }
+    }
 }

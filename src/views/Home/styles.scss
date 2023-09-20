@@ -5,53 +5,42 @@ $second-color: #090809;
 $third-color: #FFF215;
 
 .home-container {
-    @include page-spacing;
-    padding-top: $page-padding-top;
+    position: relative;
+
+    #background-video {
+        position: relative;
+        z-index: 0;
+    }
+
+    .overlay {
+        position: absolute; 
+        z-index: 10;
+        top: 115px;
+        left: 50px;
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 6rem;
+            animation: title .5s ease-in-out;
+        }
     
-    h1 {
-        font-size: 5rem;
-        animation: title .5s ease-in-out;
+        h3 {
+            opacity: 0;
+            animation: text .5s .5s ease-in-out forwards;
+            max-width: 60%;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    
+        img {
+            position: absolute;
+            height: 500px;
+            bottom: 300px;
+            right: 5vw;
+            animation: show 1s ease;
+        }
     }
-
-    p {
-        opacity: 0;
-        animation: text .5s .5s ease-in-out forwards;
-        max-width: 60%;
-        font-size: 1.1rem;
-        
-    }
-
-    img {
-        position: absolute;
-        z-index: 2;
-        right: 3vw;
-        bottom: 5vh;
-        animation: show 1s ease;
-    }
-
-    // .stripes {
-    //     display: flex;
-    //     position: absolute;
-    //     right: 2vw;
-    //     top: 0;
-
-    //     .stripe {
-    //         width: 150px;
-    //         height: 100vh;
-
-    //         &-first {
-    //             background-color: $first-color;
-    //         }
-
-    //         &-second {
-    //             background-color: $second-color;
-    //         }
-
-    //         &-third {
-    //             background-color: $third-color;
-    //         }
-    //     }
-    // }
 }
 
 @keyframes title {
