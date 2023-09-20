@@ -118,7 +118,8 @@
         .center-contact {
             display: grid;
             place-content: center;
-            margin: 0;
+            margin: 20px 0;
+            height: 100%;
     
             form {
                 width: 100%;
@@ -128,7 +129,7 @@
         .right-contact {
             display: grid;
             place-content: center;
-            margin-bottom: 60px;
+            margin-bottom: 0;
             margin-top: 50px;
 
             iframe {

@@ -19,7 +19,7 @@
             flex-wrap: wrap;
             gap: 40px;
             opacity: 0;
-            animation: show .8s ease forwards;
+            animation: show .8s .6s ease forwards;
     
             .brand {
                 cursor: pointer;
@@ -45,12 +45,12 @@
             gap: 40px;
             text-align: left;
             opacity: 0;
-            animation: title .5s 1s ease forwards;
+            animation: title .5s .6s ease forwards;
 
             .car {
                 background-color: #eee;
                 cursor: pointer;
-                transition: all .2s ease forwards;
+                transition: all .2s .6s ease forwards;
     
                 &:hover {
                     background-color: #ddd;

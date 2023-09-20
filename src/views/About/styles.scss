@@ -8,8 +8,8 @@
     .left-about {
         flex: 1;
         z-index: 5;
-        height: 90vh;
-
+        margin-top: 150px;
+        
         h1 {
             font-size: 4rem;
             animation: text 1s ease forwards;
@@ -34,11 +34,14 @@
     .right-about {
         position: relative;
         height: 100%;
-        width: 50%;
+        flex: 1;
 
         img {
+            position: absolute;
+            width: 65vw;
             opacity: 0;
             z-index: 0;
+            right: -300px;
             animation: show 1s .5s ease forwards;
         }
     }
@@ -51,9 +54,11 @@
         overflow-y: scroll;
         gap: 20px;
         padding-top: 100px;
+        padding-bottom: 0;
         @include hide-scrollbar;
     
         .left-about {   
+            margin: 0;
             height: 100%;
             width: 80vw;
 
@@ -72,15 +77,14 @@
             &-bottom {
                 width: 100%;
             }
-            
         }
     
         .right-about {
             img {
-                margin-top: 0;
-                width: 90vw;
+                position: relative;
+                right: 0;
+                width: 85vw;
             }
         }
     }
-    
 }
