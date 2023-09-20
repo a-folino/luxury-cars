@@ -28,9 +28,9 @@ export const Nav = ({ setView, view }: Props): JSX.Element => {
             if (ref?.textContent === view && ref.textContent === 'About') {
                 ref.classList.add('active-about');
             } else if (ref?.textContent === view) {
-                ref?.classList.add('active');
+                ref?.classList.add('active-nav');
             } else {
-                ref?.classList.remove('active');
+                ref?.classList.remove('active-nav');
                 ref?.classList.remove('active-about');
             }
         })

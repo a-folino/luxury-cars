@@ -1,17 +1,6 @@
-import { useRef } from 'react';
 import './styles.scss';
 
 export const About = (): JSX.Element => {
-
-    const firstImageRef = useRef<HTMLImageElement>(null);
-    const secondImageRef = useRef<HTMLImageElement>(null);
-    const thirdImageRef = useRef<HTMLImageElement>(null);
-
-    const handleNextClick = () => {
-        console.log('clicked')
-        return firstImageRef?.current?.style.translate === '-100%'
-    }
-
     return (
         <div className="about-container">
             <div className="left-about">
@@ -26,12 +15,7 @@ export const About = (): JSX.Element => {
             </div>
 
             <div className="right-about">
-                <div className="slideshow">
-                    <img src={require('../../assets/about-1.jpg')} alt="people" ref={firstImageRef} />
-                    <img src={require('../../assets/about-2.jpg')} alt="Car" ref={secondImageRef} />
-                    <img src={require('../../assets/about-3.jpg')} alt="Car" ref={thirdImageRef} />
-                </div>
-                <button onClick={() => handleNextClick()}>next</button>
+                <img src={require('../../assets/about-car.webp')} alt="lamborghini" />
             </div>
         </div>
     )

@@ -2,85 +2,95 @@
 
 .cars-container {
     display: flex;
-    align-items: center;
-    @include page-spacing;
+    flex-direction: column;
+    @include page-spacing;  
+    padding-top: $page-padding-top;
 
-    .brands {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
-        max-width: 500px;
-
-        & > * {
-            cursor: pointer;
-            filter: grayscale(100%);
-            max-width: 120px;
-            transition: all .3s ease;
-
-            &:hover {
-                filter: grayscale(0%);
-                transition: all .3s ease;
-            }
-        }
-
-        .active {
-            filter: grayscale(0%);
-        }
+    h1 {
+        margin-bottom: 70px;
+        animation: title 1s ease forwards;
     }
 
-    .cars {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        gap: 40px;
-        margin-left: 100px;
-        text-align: left;
-        width: 250px;
+    .cars-wrapper {
+        display: grid;
+        grid-template-columns: 1fr .75fr 2fr;
 
-        .car {
-            background-color: #eee;
-            cursor: pointer;
-            transition: all .2s ease;
-
-            &:hover {
-                background-color: #ddd;
-                transition: all .2s ease;
-            }
-
-            p {
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                font-weight: 500;
-                padding: 10px;
-
-                svg {
-                    height: 12px;
-                    width: 12px;
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            grid-column: 1 / 2;
+    
+            & > * {
+                cursor: pointer;
+                filter: grayscale(100%);
+                max-width: 120px;
+                transition: all .3s ease;
+    
+                &:hover {
+                    filter: grayscale(0%);
+                    transition: all .3s ease;
                 }
             }
+    
+            .active {
+                filter: grayscale(0%);
+            }
+        }
+    
+        .cars {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+            text-align: left;
+            grid-column: 2 / 3;
+            margin-left: 100px;
+
+            .car {
+                background-color: #eee;
+                cursor: pointer;
+                transition: all .2s ease;
+    
+                &:hover {
+                    background-color: #ddd;
+                    transition: all .2s ease;
+                }
+    
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    font-weight: 500;
+                    padding: 10px;
+    
+                    svg {
+                        height: 12px;
+                        width: 12px;
+                    }
+                }
+                
+            }
+        }
+    
+        .car-details {
+            margin-left: 150px;
+            animation: show .5s ease;
+            height: 450px;
+            animation: show .5s ease;
+            grid-column: 3 / 4;
+    
+            h2 {
+                font-size: 2rem;
+            }
             
-        }
-    }
-
-    .car-details {
-        margin-left: 100px;
-        animation: show .5s ease;
-        height: 500px;
-        animation: show .5s ease;
-        background-color: #eee;
-        padding: 20px;
-
-        h2 {
-            font-size: 2rem;
-        }
-        
-        img {
-            height: 400px;
-        }
-
-        p {
-            width: 70ch;
+            img {
+                height: 400px;
+            }
+    
+            p {
+                width: 70ch;
+            }
         }
     }
 }

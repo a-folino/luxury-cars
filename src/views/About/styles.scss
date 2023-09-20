@@ -10,14 +10,17 @@
 
     .left-about {
         flex: 1;
+        z-index: 5;
 
         h1 {
             font-size: 4rem;
+            animation: text 1s ease forwards;
         }
 
         h3 {
             font-size: 1.75rem;
             font-weight: 300;
+            animation: title 1s ease forwards;
         }
 
         &-bottom {
@@ -25,30 +28,23 @@
             flex-direction: column;
             gap: 20px;
             margin-top: 20px;
+            width: 70ch;
         }
     }
 
     .right-about {
-        display: flex;
-        justify-content: center;
-        align-items: center;        
-        flex: 1;
-        overflow: hidden;
         position: relative;
+        height: 100%;
+        width: 50%;
 
-        .slideshow {
-            position: relative;
-            height: 400px;
-            width: 640px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            overflow: hidden;
-            border: 1px solid red;
-
-            img {
-                position: absolute;
-            }
+        img {
+            position: absolute;
+            opacity: 0;
+            height: 800px;
+            bottom: -3vw;
+            right: -5vw;
+            z-index: 0;
+            animation: show 1s 1s ease forwards;
         }
     }
 }

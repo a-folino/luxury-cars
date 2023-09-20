@@ -1,18 +1,28 @@
 @import '../../components/app/styles.scss';
 
 .services-container {
+    display: grid;
+    grid-template-rows: 80px min-content;
     @include page-spacing;
     padding-top: $page-padding-top;
 
+    h1 {
+        animation: title 1s ease forwards;
+    }
+    
     .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-        margin: 0 200px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 0 100px;
+        grid-row: 2 / 3;
+        background-color: #ddd;
+        padding: 50px;
 
         .card {
             margin: 0 auto;
-
+            max-width: 250px;
+            
             p {
                 margin-top: 10px;
             }
@@ -25,7 +35,7 @@
 
         .second {
             opacity: 0;
-            animation: slideIn .5s .2s ease-in-out forwards
+            animation: slideIn .5s .2s ease-in-out forwards;
         }
 
         .third {
@@ -47,7 +57,18 @@
             opacity: 0;
             animation: slideIn .5s 1s ease-in-out forwards;
         }
-        
+    }
+
+    .slideshow-container {
+        width: 700px;
+        margin: 75px auto;
+        grid-row: 2 / 3;
+
+        .default-nav {
+            background: transparent !important;
+            fill: white !important;
+            margin: 0 10px;
+        }
     }
 }
 

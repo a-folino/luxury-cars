@@ -131,6 +131,21 @@ export const cars = {
     ]
 }
 
+export const slideImages = [
+    {
+        url: "https://images.pexels.com/photos/7144187/pexels-photo-7144187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        alt: "people"
+    },
+    {
+        url: "https://images.pexels.com/photos/13275527/pexels-photo-13275527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        alt: "person driving"
+    },
+    {
+        url: "https://images.pexels.com/photos/4173191/pexels-photo-4173191.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        alt: "cars in showroom"
+    },
+]
+
 export const colors = {
     primaryColor: '#fbfbfb',
     secondaryColor: '#ccc',
