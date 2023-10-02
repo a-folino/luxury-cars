@@ -46,7 +46,7 @@ export const Cars = (): JSX.Element => {
 
     return (
         <div className="cars-container">
-            <h1>Our cars, curated.</h1>
+            <h1>Find the car for you.</h1>
 
             <div className="cars-wrapper">
                 <div className="brands">

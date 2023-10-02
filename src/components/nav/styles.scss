@@ -41,7 +41,7 @@ nav {
 
 .hamburger-menu {
     position: absolute;
-    background: $color-blue;
+    background: white;
     display: grid;
     place-items: center;
     height: 50px;
@@ -60,7 +60,7 @@ nav {
     svg {
         width: 30px;
         height: 30px;
-        fill: white;
+        fill: black;
     }
 }
 
@@ -73,7 +73,7 @@ nav {
     z-index: 50;
     background: black;
     width: 100%;
-    height: 100%;
+    height: 800px;
     transform: translateX(0);
     transform: translateY(0);
     transition: all .5s ease;
