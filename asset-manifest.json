@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/luxury-cars/static/css/main.75cf022e.css",
-    "main.js": "/luxury-cars/static/js/main.0e5ee6f3.js",
+    "main.css": "/luxury-cars/static/css/main.4fd10ef7.css",
+    "main.js": "/luxury-cars/static/js/main.bf432575.js",
     "static/media/homepage.mp4": "/luxury-cars/static/media/homepage.e905f66bc10f01c85345.mp4",
     "static/media/audi-rs7.webp": "/luxury-cars/static/media/audi-rs7.fccbb95c9e9c99874542.webp",
     "static/media/bmw-m2.webp": "/luxury-cars/static/media/bmw-m2.1c72a863832c50888810.webp",
@@ -36,11 +36,11 @@
     "static/media/audi-logo.png": "/luxury-cars/static/media/audi-logo.260518662ac3ff35ee0c.png",
     "static/media/porsche-logo.png": "/luxury-cars/static/media/porsche-logo.d300e752e7b04bc51572.png",
     "index.html": "/luxury-cars/index.html",
-    "main.75cf022e.css.map": "/luxury-cars/static/css/main.75cf022e.css.map",
-    "main.0e5ee6f3.js.map": "/luxury-cars/static/js/main.0e5ee6f3.js.map"
+    "main.4fd10ef7.css.map": "/luxury-cars/static/css/main.4fd10ef7.css.map",
+    "main.bf432575.js.map": "/luxury-cars/static/js/main.bf432575.js.map"
   },
   "entrypoints": [
-    "static/css/main.75cf022e.css",
-    "static/js/main.0e5ee6f3.js"
+    "static/css/main.4fd10ef7.css",
+    "static/js/main.bf432575.js"
   ]
 }
